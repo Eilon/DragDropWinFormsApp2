@@ -1,0 +1,26 @@
+@using System.Net.Http
+@using System.Net.Http.Json
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.Components.Web.Virtualization
+@using Microsoft.JSInterop
+@using BlazorDragDropWinFormsApp1
+
+@inject DragService dragService
+
+<div @onmousedown="onDragStart" style="background-color: gray">drag testing</div>
+
+<div>
+    Nice content here
+</div>
+
+@code {
+    private void onDragStart()
+        => dragService.BeginDrag();
+
+    //private void onDragEnd()
+    //   => dragService.EndDrag();
+}
+
+Hi @System.DateTime.Now

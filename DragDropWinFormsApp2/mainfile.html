@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body style="background-color: lightblue">
+    <div onmousedown="doMouseDown()">
+        <h1>Drag me!</h1>
+    </div>
+
+    <script>
+
+        function doMouseDown() {
+            console.log("Mouse down! Sending message...");
+
+            window.chrome.webview.postMessage("hi post");
+        }
+
+    </script>
+
+</body>
+</html>
